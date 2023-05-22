@@ -1,0 +1,523 @@
+/* Declare global CSS variables */
+:root {
+    --perfect-yellow: rgb(240, 202, 103);
+    --perfect-black: rgb(10, 13, 5);
+    --nav-gray: #333;
+}
+
+header {
+    padding: 0px 0px 0px;
+    padding-bottom: 0px;
+}
+
+#banner {
+    background-position: center;
+    position: relative;
+    height: "auto";
+    /* height: 300%; Caps image height (Image pixelates at max browser width)*/
+    width: 100%;
+    background-size:cover;
+    /* padding-bottom: 3px; */
+}
+
+body {
+    background-color: var(--perfect-yellow);
+    border-top: 3px solid black;
+    text-align: center;
+}
+
+/* Set PerfectPicks Title style */
+.nav-link-logo {
+    width: 237px !important;
+    display: inline-block !important;
+    font-size: 24px !important;
+}
+
+/* Set PerfectPicks Brand Logo in Navbar */
+img.d-inline-block {
+    display: inline-block;
+    height: 40px;
+    /* height: 6vh; */
+    /* width: 2.5vw; */
+    padding: 0px;
+    margin-right: 3px;
+}
+
+/* Set main-navbar style */
+.main-nav {
+    background-color: var(--nav-gray);
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.main-nav a {
+    display: inline-block;
+    width: 8.95%;
+    justify-content: center;
+    align-items: center;
+    color: var(--perfect-yellow) !important; /* Something is over-ruling this without !important */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15.5px;
+    border-right: 1px solid black;
+    line-height: 45px;
+}
+
+.dropdown-menu > li > a {
+    border-right: none;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Set "More" dropdown menu background color & font color */
+.dropdown-menu {
+    background-color: var(--nav-gray);
+    color: var(--perfect-yellow);
+    width: 180px;
+}
+
+.dropdown-menu a, .dropdown-menu a:hover {
+    color: var(--perfect-yellow);
+}
+
+#more-link {
+    display: flex;
+    flex-shrink: 20;
+    /* padding-left: 50px;
+    margin-right:50px; */
+    width: 200px;
+}
+
+.main-nav a:hover {
+    background-color: var(--perfect-black);
+    opacity: 1.0 !important;
+}
+
+.main-nav a:active {
+    opacity: 0.7 !important;
+}
+
+.social-nav > span > a i {
+    margin-top: -2px;
+    color: white;
+    opacity: .9;
+    border: 2.5px solid white;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* height: 5vh; */
+    width: 38px;
+    height: 36px;
+    vertical-align: center;
+
+}
+.social-nav {
+    background-color: var(--perfect-black);
+    text-align: left;
+    padding: 10px 16px;
+}
+
+.social-nav > span > a i:hover {
+    color: black;
+    background-color: white;
+    opacity: .9;
+    border-color: white;
+    /* background-color: var(--perfect-yellow) !important; */
+}
+
+.social-nav > span > a i:active {
+    opacity: .6;
+}
+
+.search-box {
+    right: 167px;
+    text-align: right;
+    position: relative;
+    margin-left: auto;
+    padding-right: 10px;
+    margin-top: -31px;
+    height: 31px;
+    width: 42px;
+    transition: all 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+.search-box.active{
+    width: 200px;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 15px;
+    border-radius: 50px;
+    padding-left: 30px;
+    transition: padding-left 0.5s;
+
+    /* padding: 0 60px 0 20px; */
+}
+
+.search-box input.active {
+    /* padding-left: 35px;
+    transition: 5s;
+    padding-right: 25px; */
+    padding-left: 36px;
+    padding-right: 25px;
+    transition: padding-right 5s, padding-left 0.7s, font-size 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55); /* Delay the padding of Search Bar placeholder text */
+
+}
+
+.search-box .search-btn {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    z-index: 1;
+    margin-right: 10px;
+    background-color: var(--perfect-black);
+    color: var(--perfect-yellow);
+    line-height: 28px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: right 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), top 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), transform 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+.search-box .search-btn.active {
+    right: 160px;
+    transform: translateY(-50%) rotate(360deg);
+    transition: right 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), top 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), transform 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+    /* visibility: hidden; --> Used with .btn-actual */
+}
+
+.search-box .search-btn:hover {
+    color: rgba(240, 202, 103, 0.6);
+}
+
+.search-box .search-btn:active {
+    color: rgba(240, 202, 103, 1.0);
+}
+
+.search-box .exit-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+    visibility: hidden;
+    transition: right 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), top 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), transform 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), visibility 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+
+}
+
+.search-box .exit-btn.active {
+    right: 20px;
+    /* right: -9px; */
+    transform: translateY(-50%) rotate(180deg);
+    transition: right 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), transform 0.6s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+.search-box .exit-btn:hover {
+    opacity: 0.6;
+}
+
+.search-box .exit-btn:active {
+    color: black;
+    transition: 0.1s;
+    opacity: 1.0;
+}
+
+.sign-upBtn {
+    position: fixed;
+    top: 2%;
+    width: 158px;
+    height: 30px;
+    margin-left: auto;
+    right: 16px;
+    /* background-color: var(--perfect-yellow); */
+    /* background-color: rgb(107, 204, 87); */
+    background-color: rgb(96, 207, 67);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    /* box-shadow: 0 4px rgba(255, 255, 255, 0.2); */
+    box-shadow: 2px 3px rgb(56, 81, 67);
+    transition: width 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), font-size 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+.sign-upBtn:active {
+    box-shadow: 2px 0px 3px 0px rgb(56, 81, 67);
+    opacity: 0.8;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* .search-box .btn-actual {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    z-index: 1;
+    border: none;
+    background-color: var(--perfect-black);
+    color: var(--perfect-yellow);
+    line-height: 28px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+    visibility: hidden;
+}
+.search-box .btn-actual.active {
+    right: 0px;
+    transform: translateY(-50%) rotate(360deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+    visibility: visible;
+}
+
+.search-box .btn-actual:hover {
+    color: rgba(240, 202, 103, 0.6);
+}
+
+.search-box .btn-actual:active {
+    color: rgba(240, 202, 103, 1.0);
+} */
+
+.sidepanel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--nav-gray);
+    /* opacity: .9; */
+    color: var(--perfect-yellow) !important;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+.sidepanel a {
+    display: block !important;
+    font-size: 20px !important;
+    width: auto;
+    margin-bottom: 8px;
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    border-right: none !important;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.closebtn:hover {
+    color: var(--perfect-black) !important;
+    background-color: var(--navbar-gray) !important;
+}
+
+.openbtn {
+    display: inline;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--navbar-gray);
+    color: var(--perfect-yellow);
+    margin-left: auto;
+    border: none;
+}
+.topnav-right {
+    float: right !important;
+}
+
+#myPanelSocial-nav i {
+    margin-top: 30px;
+    /* vertical-align: center; */
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: var(--nav-gray);
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.topnav a {
+    display: block;
+    float: left;
+    /* width: 9.09%; */
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: bold;
+    color: var(--perfect-yellow);
+    /* text-align: center; */
+    text-decoration: none;
+    border-right: 1px solid black;
+}
+
+.topnav a:hover {
+    background-color: var(--perfect-black);
+}
+
+/* Set PGA navbar-link animated underline position */
+#pga-link::before {
+    margin-left: 17px !important;
+}
+
+/* Set Nascar navbar-link animated underline position */
+#nascar-link::before {
+    margin-left: 18.58px;
+}
+
+/* Set navbar drop-down menu initial animated underline position */
+#more-link::before {
+    width: 0%;
+    bottom: 5.04px;
+    margin-left: 1px;
+}
+
+/* Set NFL navbar-link animated underline width on mouseover at full browser width */
+@media (min-width: 990px) {
+#nfl-link:hover::before
+{
+    width: 29.25px;
+}
+}
+
+/* Set NBA navbar-link animated underline width on mouseover at full browser width */
+@media (min-width: 990px) {
+#nba-link:hover::before
+{
+    width: 33.5px;
+}
+}
+
+/* Set MLB navbar-link animated underline length on mouseover at full browser width */
+@media (min-width: 990px) {
+#mlb-link:hover::before
+{
+    width: 33.5px;
+}
+}
+
+/* Set PGA navbar link animated underline length on mouseover at full browser width */
+@media (min-width: 990px) {
+#pga-link:hover::before
+{
+    width: 32px;
+}
+}
+
+/* Set NHL navbar link animated underline length at full browser width */
+@media (min-width: 990px) {
+#nhl-link:hover::before
+{
+    width: 32.5px;
+}
+}
+
+/* Set Nascar navbar link animated underline length at full browser width */
+@media (min-width: 990px) {
+#nascar-link:hover::before
+{
+    width: 52px;
+}
+}
+
+/* Set navbar "More" dropdown animated underline on mouseover at full browser width */
+@media (min-width: 990px) {
+#more-link:hover::before
+{
+    width: 38.5px;
+}
+}
+
+/* Underline NFL link-tab when active */
+@media (min-width: 990px) {
+.activeNFL::before
+{
+    width: 30px;
+    bottom: 13.5px;
+}
+}
+
+/* Underline NBA link-tab when active */
+@media (min-width: 990px) {
+.activeNBA::before
+{
+    width: 35px;
+    bottom: 13.5px;
+}
+}
+
+/* Underline MLB link-tab when active */
+@media (min-width: 990px) {
+.activeMLB::before
+{
+    width: 34.5px;
+    bottom: 13.5px;
+}
+}
+
+/* Rotate navbar "More" dropdown menu arrow upward when clicked */
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+/* Set "More" dropdown menu arrow animation speed */
+.dropdown-toggle::after {
+    transition: 0.25s;
+}
+
+/* Adjust animated underline of "More" navbar link when open */
+.dropdown-toggle[aria-expanded="true"]::before {
+    width: 35px !important;
+    transition: 0ms !important;
+}
+

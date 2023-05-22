@@ -1,0 +1,98 @@
+/* Specify formatting for HTML elements on small browsers */
+@media (max-width: 990px) {
+
+/* Hide all main navbar links except PerfectPicks logo */
+.main-nav a:not(:first-child)
+{
+    display: none;
+}
+
+/* Hide PerfectPicks logo border */
+.main-nav a:first-child
+{
+    border-right: none !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+
+}
+/* Position PerfectPicks Logo on small browsers */
+img.d-inline-block
+{
+    margin-top: 5px;
+    margin-right: 8px;
+}
+.search-box {
+    right: 135px;
+}
+.search-box.active {
+    width: 150px;
+    right: 135px;
+}
+.search-box .search-btn.active {
+    right: 110px;
+}
+
+.search-box input {
+    transition: padding-left 0.7s, font-size 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+.search-box input.active {
+    font-size: 13px;
+    transition: padding-right 5s, padding-left 0.7s, font-size 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+/* Resize width & font-size of Sign-Up button on small browsers */
+.sign-upBtn {
+    width: 130px;
+    font-size: 11px;
+    transition: width 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55), font-size 0.5s cubic-bezier(0.68, -0.4, 0.265, 1.55);
+}
+
+/* Hide main navbar dropdown menu button & links on small browsers */
+#more-link, #navbar-dropdown
+{
+    display: none !important;
+}
+
+/* Change side panel Menu button background color on mousover */
+.openbtn:hover
+{
+    background-color: var(--perfect-black) !important;
+}
+
+/* Dampen side panel Menu button when clicked */
+.openbtn:active
+{
+    opacity: 0.7;
+}
+
+/* Set the side panel Menu button stacked bars icon alignment */
+.openbtn > i
+{
+    padding-top: 4.75px;
+    margin-right: 6px;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Set the side panel Menu button font alignment */
+.openbtn:not(.openbtn > i)
+{
+    padding-top: 9px;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+}
+
+.fa-circle
+{
+    padding-top: 7px !important;
+}
+
+/* Display side panel menu on small browsers only */
+@media (min-width: 991px)
+{
+    .openbtn
+    {
+        display: none !important;
+    }
+}
