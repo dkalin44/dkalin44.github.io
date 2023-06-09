@@ -30,7 +30,7 @@
             <!-- <i class="fa-regular fa-circle fa-stack-2x"></i> -->
             <a href="#instagram"><i class="fa-brands fa-instagram fa-stack-1x"></i></a>
           </span>
-          <form action="/action_page.php">
+          <form action="#">
           <div class="search-box">
             <input type="text" placeholder="Search..." name="search">
             <div class="search-btn">
@@ -42,12 +42,12 @@
             </div>
 
             <!-- Button to open the modal -->
-          <button class="sign-upBtn" onclick="document.getElementById('id01').style.display='block'">Register <i class="fa-regular fa-user"></i> | Login <i class="fa-regular fa-circle-user"></i></button>
+          <button class="sign-upBtn" onmouseup="document.getElementById('id01').style.display='block'">Register <i class="fa-regular fa-user"></i> | Login <i class="fa-regular fa-circle-user"></i></button>
 
           <!-- The Modal (contains the Sign Up form) -->
           <div id="id01" class="modal">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">times;</span>
-            <form class="modal-content" action="/action_page.php">
+            <form class="modal-content" action="">
               <div class="container">
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
