@@ -26,14 +26,14 @@ body {
     text-align: center;
 }
 
-/* Set PerfectPicks Title style */
+/* Set PerfectPicks complete logo style */
 .nav-link-logo {
     width: 237px !important;
     display: inline-block !important;
     font-size: 24px !important;
 }
 
-/* Set PerfectPicks Brand Logo in Navbar */
+/* Set PerfectPicks logo image in Navbar */
 img.d-inline-block {
     display: inline-block;
     height: 40px;
@@ -75,7 +75,7 @@ img.d-inline-block {
     font-weight: 500;
 }
 
-/* Set "More" dropdown menu background color & font color */
+/* Set navbar open dropdown menu background color & font color */
 .dropdown-menu {
     background-color: var(--nav-gray);
     color: var(--perfect-yellow);
@@ -88,10 +88,10 @@ img.d-inline-block {
 
 #more-link {
     display: flex;
-    flex-shrink: 20;
-    /* padding-left: 50px;
-    margin-right:50px; */
-    width: 200px;
+    flex-shrink: 100;
+    flex-basis: 20%; /* Responsive "More" menu width */
+    /* width: 200px - hardcoded width */
+    min-width: 100px;
 }
 
 .main-nav a:hover {
